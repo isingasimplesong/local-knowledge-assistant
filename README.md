@@ -27,6 +27,8 @@ streamlit run main.py
 
 - Get a [groq API key here](https://console.groq.com/) to get the assistant running *as is*
 - Or adjust the script and run it with OpenAI, a local llama model, or anything else
+  - When running it with OpenAI API, you can completly comment the embedding
+    model configuration, it will default to OpenAI embedding model
 - you can change or translate the prompt sent to the model in `template.txt`,
 - you can change or translate UI messages in `messages.json`,
 - you can configure the Chatbot UI in `ui.json`
