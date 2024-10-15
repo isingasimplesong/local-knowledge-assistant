@@ -32,6 +32,8 @@ streamlit run main.py
 - you can change or translate the prompt sent to the model in `template.txt`,
 - you can change or translate UI messages in `messages.json`,
 - you can configure the Chatbot UI in `ui.json`
+- **The first run is expected to be slow :** The embedding model need to index
+  all of your data
 
 ## Roadmap
 
