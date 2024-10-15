@@ -35,3 +35,4 @@ streamlit run main.py
 
 - Provide a simpler way to change llm & embedding models
 - Provide a simple way to update index
+- Provide a docker image for easy deployment
