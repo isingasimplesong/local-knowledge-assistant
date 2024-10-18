@@ -11,6 +11,8 @@
 
 ## Installation
 
+### Linux
+
 ```bash
 git clone https://github.com/isingasimplesong/local-knowledge-assistant.git
 cd local-knowledge-assistant
@@ -21,6 +23,11 @@ pip install -r requirements.txt
 export GROQ_API_KEY=<YOUR_API_KEY>
 streamlit run main.py
 ```
+
+### Mac & Windows
+
+Should not be very different. Feel free to try on your system and contribute
+tested instructions
 
 ## Configuration
 
