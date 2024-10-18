@@ -29,7 +29,7 @@ streamlit run main.py
 > [!warning]
 > Untested. Please profide feedback if you try
 
-Linux instructions should work on mac. Please confirm if you try
+Linux instructions should work
 
 ### Windows
 
