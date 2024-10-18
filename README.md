@@ -24,10 +24,31 @@ export GROQ_API_KEY=<YOUR_API_KEY>
 streamlit run main.py
 ```
 
-### Mac & Windows
+### Mac
 
-Should not be very different. Feel free to try on your system and contribute
-tested instructions
+> [!note]
+> Untested. Please profide feedback if you try
+
+Linux instructions should work on mac. Please confirm if you try
+
+### Windows
+
+Use `powershell`
+
+> [!note]
+> Untested. Please profide feedback if you try
+
+```powershell
+git clone https://github.com/isingasimplesong/local-knowledge-assistant.git
+cd local-knowledge-assistant
+# Put your data in the data/ directory
+python -m venv venv
+.\venv\Scripts\Activate  # Note: Use `deactivate` to exit the environment when done
+pip install -r requirements.txt
+$env:GROQ_API_KEY="<YOUR_API_KEY>"  # This will only last for this session; consider adding it to your profile
+streamlit run main.py
+
+```
 
 ## Configuration
 
