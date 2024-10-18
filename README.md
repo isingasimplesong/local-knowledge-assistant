@@ -26,7 +26,7 @@ streamlit run main.py
 
 ### Mac
 
-> [!note]
+> [!warning]
 > Untested. Please profide feedback if you try
 
 Linux instructions should work on mac. Please confirm if you try
@@ -35,7 +35,7 @@ Linux instructions should work on mac. Please confirm if you try
 
 Use `powershell`
 
-> [!note]
+> [!warning]
 > Untested. Please profide feedback if you try
 
 ```powershell
