@@ -58,7 +58,7 @@ streamlit run main.py
 
 - Get a [groq API key here](https://console.groq.com/) or an [OpenAI API key here](https://platform.openai.com/api-keys). If needed, [Ollama users should read this](https://github.com/ollama/ollama/issues/849)
 - Edit `config.yaml` to your liking
-- Set env variables `GROQ_API_KEY`and `OPENAI_API_KEY` [at system level](https://chatgpt.com/share/67155926-22b0-800e-806f-b08e68192d8e)
+- Set env variables `GROQ_API_KEY`and `OPENAI_API_KEY` [at system level](https://chatgpt.com/share/6715773a-ca24-800e-a80c-109fd28dce35)
 - you can change or translate the prompt sent to the model in `template.txt`,
 - you can change or translate UI messages in `messages.json`,
 - you can configure the Chatbot UI in `ui.json`
