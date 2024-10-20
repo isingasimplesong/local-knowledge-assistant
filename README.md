@@ -42,6 +42,7 @@ Use `powershell`
 > Untested. Please profide feedback if you try
 
 ```powershell
+# clone code
 git clone https://github.com/isingasimplesong/local-knowledge-assistant.git
 cd local-knowledge-assistant
 # Put your data in the data/ directory
