@@ -3,6 +3,7 @@ import json
 import os
 
 import streamlit as st
+import yaml
 from llama_index.core import (
     PromptTemplate,
     Settings,
@@ -11,33 +12,85 @@ from llama_index.core import (
     VectorStoreIndex,
     load_index_from_storage,
 )
-from llama_index.embeddings.huggingface import HuggingFaceEmbedding
-
-# choose one
-# from llama_index.llms.openai import OpenAI
-# from llama_index.llms.ollama import Ollama
-from llama_index.llms.groq import Groq
 
 DATA_DIR = "./data"
 INDEX_DIR = "./storage"
 TEMPLATE_FILE = "./template.txt"
 MESSAGES_FILE = "./messages.json"
 UI_CONFIG_FILE = "./ui.json"
+CONFIG_FILE = "./config.yaml"
 
-# choose one
-# LLM_MODEL_NAME = "gpt-4o"
-# LLM_MODEL_NAME = "llama3.2:latest"
-LLM_MODEL_NAME = "llama-3.2-90b-text-preview"
+# def load_config(config_file):
+#     """
+#     Load the configuration from a YAML file.
+#     """
+#     with open(config_file, "r") as f:
+#         config = yaml.safe_load(f)
+#     return config
 
-# Default to openAI embedding model when next 3 lines are commented
-EMBEDDING_NAME = "mixedbread-ai/mxbai-embed-large-v1"
-EMBED_MODEL = HuggingFaceEmbedding(model_name=EMBEDDING_NAME)
-Settings.embed_model = EMBED_MODEL
 
-# choose one
-# llm = OpenAI(model=LLM_MODEL_NAME)
-# llm = Ollama(model=LLM_MODEL_NAME, temperature = 0.2 ,request_timeout=220.0)
-llm = Groq(model=LLM_MODEL_NAME, temperature=0.2, request_timeout=220.0)
+def load_config(config_file):
+    """
+    Load the configuration from a YAML file and expand environment variables.
+    """
+    with open(config_file, "r") as f:
+        config_str = f.read()
+        config_str = os.path.expandvars(config_str)
+        config = yaml.safe_load(config_str)
+    return config
+
+
+config = load_config(CONFIG_FILE)
+
+# Access API keys
+api_keys = config.get("api_keys", {})
+openai_api_key = api_keys.get("openai_api_key")
+groq_api_key = api_keys.get("groq_api_key")
+ollama_api_key = api_keys.get("ollama_api_key")
+
+# Set environment variables or handle API keys as needed
+if openai_api_key:
+    os.environ["OPENAI_API_KEY"] = openai_api_key
+if groq_api_key:
+    os.environ["GROQ_API_KEY"] = groq_api_key
+if ollama_api_key:
+    os.environ["OLLAMA_API_KEY"] = ollama_api_key
+
+# Embedding setup
+embedding_provider = config.get("embedding_provider", "default")
+if embedding_provider == "huggingface":
+    from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+
+    embedding_name = config.get("embedding_name")
+    if not embedding_name:
+        raise ValueError(
+            "Embedding name must be specified for Hugging Face embeddings."
+        )
+    EMBED_MODEL = HuggingFaceEmbedding(model_name=embedding_name)
+    Settings.embed_model = EMBED_MODEL
+elif embedding_provider == "default":
+    # Use default embedding (e.g., OpenAI)
+    pass
+else:
+    raise ValueError(f"Unsupported embedding_provider: {embedding_provider}")
+
+from llama_index.llms.groq import Groq
+from llama_index.llms.ollama import Ollama
+
+# LLM setup
+from llama_index.llms.openai import OpenAI
+
+llm_classes = {"openai": OpenAI, "ollama": Ollama, "groq": Groq}
+
+llm_provider = config.get("llm_provider")
+llm_class = llm_classes.get(llm_provider)
+
+if llm_class is None:
+    raise ValueError(f"Unsupported llm_provider: {llm_provider}")
+
+llm_params = config.get("llm_parameters", {})
+
+llm = llm_class(model=config["llm_model_name"], **llm_params)
 
 Settings.llm = llm
 

@@ -1,4 +1,7 @@
-llama-index-embeddings-huggingface
-llama-index-llms-groq
-llama-index-readers-file
 streamlit
+pyyaml
+llama_index
+llama_index.embeddings.huggingface
+llama_index.llms.groq
+llama_index.llms.ollama
+llama_index.llms.openai

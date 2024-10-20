@@ -1,0 +1,31 @@
+# LLM Provider Configuration
+# Available options: 'openai', 'ollama', 'groq'
+
+llm_provider: 'openai'
+
+# LLM Model Name
+# refer to groq or openai documentation for available models
+# llm_model_name: 'llama-3.2-90b-text-preview'
+llm_model_name: 'gpt-4o-mini'
+
+# LLM Parameters (adjust as needed)
+# llm_parameters:
+#   temperature: 0.2
+#   request_timeout: 220.0
+
+# Embedding Provider Configuration
+# Available options: 'huggingface', 'default' (for OpenAI)
+# embedding_provider: 'huggingface'
+embedding_provider: 'default'
+
+# Embedding Model Name (comment for OpenAI, uncomment if using Hugging Face)
+# embedding_name: 'mixedbread-ai/mxbai-embed-large-v1'
+
+# API Keys
+# set them at system level
+# see : https://chatgpt.com/share/67155926-22b0-800e-806f-b08e68192d8e
+api_keys:
+  openai_api_key: '${OPENAI_API_KEY}'
+  groq_api_key: '${GROQ_API_KEY}'
+  # if needed
+  # ollama_api_key: '${OLLAMA_API_KEY}'
