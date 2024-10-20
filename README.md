@@ -70,3 +70,8 @@ streamlit run main.py
 - [x] ~~Provide a simpler way to change llm & embedding models~~
 - [ ] Improve indexation & default prompts
 - [ ] Provide a docker image for easy deployment
+
+## Thanks
+
+- to [Stéphane Debove](https://github.com/stephanedebove/gouroufabulus) for the initial code
+- to [GabrielMPhi](https://github.com/GabrielMPhi/ParlerAuxArchives) for giving me the impulsion to do this
