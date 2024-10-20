@@ -23,7 +23,7 @@ embedding_provider: 'default'
 
 # API Keys
 # set them at system level
-# see : https://chatgpt.com/share/67155926-22b0-800e-806f-b08e68192d8e
+# see : https://chatgpt.com/share/6715773a-ca24-800e-a80c-109fd28dce35
 api_keys:
   openai_api_key: '${OPENAI_API_KEY}'
   groq_api_key: '${GROQ_API_KEY}'
