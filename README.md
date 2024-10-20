@@ -67,5 +67,5 @@ streamlit run main.py
 ## Roadmap
 
 - [x] ~~Provide a simpler way to change llm & embedding models~~
-- Improve indexation & default prompts
-- Provide a docker image for easy deployment
+- [ ] Improve indexation & default prompts
+- [ ] Provide a docker image for easy deployment
