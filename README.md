@@ -14,13 +14,15 @@
 ### Linux
 
 ```bash
+# clone code
 git clone https://github.com/isingasimplesong/local-knowledge-assistant.git
 cd local-knowledge-assistant
 # put your data in data/
+ln -s /path/to/your_data data
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-export GROQ_API_KEY=<YOUR_API_KEY>
+# edit config.yaml according to your needs
 streamlit run main.py
 ```
 
@@ -45,17 +47,16 @@ cd local-knowledge-assistant
 python -m venv venv
 .\venv\Scripts\Activate  # Note: Use `deactivate` to exit the environment when done
 pip install -r requirements.txt
-$env:GROQ_API_KEY="<YOUR_API_KEY>"  # This will only last for this session; consider adding it to your profile
+# edit config.yaml according to your needs
 streamlit run main.py
 
 ```
 
 ## Configuration
 
-- Get a [groq API key here](https://console.groq.com/) to get the assistant running *as is*
-- Or adjust the script and run it with OpenAI, a local llama model, or anything else
-  - When running it with OpenAI API, you can completly comment the embedding
-    model configuration, it will default to OpenAI's embedding model
+- Get a [groq API key here](https://console.groq.com/) or an [OpenAI API key here](https://platform.openai.com/api-keys). If needed, [Ollama users should read this](https://github.com/ollama/ollama/issues/849)
+- Edit `config.yaml` to your liking
+- Set env variables `GROQ_API_KEY`and `OPENAI_API_KEY` [at system level](https://chatgpt.com/share/67155926-22b0-800e-806f-b08e68192d8e)
 - you can change or translate the prompt sent to the model in `template.txt`,
 - you can change or translate UI messages in `messages.json`,
 - you can configure the Chatbot UI in `ui.json`
@@ -64,5 +65,6 @@ streamlit run main.py
 
 ## Roadmap
 
-- Provide a simpler way to change llm & embedding models
+- [x] Provide a simpler way to change llm & embedding models
+- Improve indexation & default prompts
 - Provide a docker image for easy deployment
