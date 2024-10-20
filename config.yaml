@@ -8,7 +8,7 @@ llm_provider: 'openai'
 # llm_model_name: 'llama-3.2-90b-text-preview'
 llm_model_name: 'gpt-4o-mini'
 
-# LLM Parameters (adjust as needed)
+# LLM Parameters (optional - adjust as needed)
 # llm_parameters:
 #   temperature: 0.2
 #   request_timeout: 220.0
