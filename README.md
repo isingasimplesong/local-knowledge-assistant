@@ -74,4 +74,4 @@ streamlit run main.py
 ## Thanks
 
 - to [Stéphane Debove](https://github.com/stephanedebove/gouroufabulus) for the initial code
-- to [GabrielMPhi](https://github.com/GabrielMPhi/ParlerAuxArchives) for giving me the impulsion to do this
+- to [Gabriel Monette](https://github.com/GabrielMPhi/ParlerAuxArchives) for giving me the impulsion to do this
