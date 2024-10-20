@@ -20,14 +20,6 @@ MESSAGES_FILE = "./messages.json"
 UI_CONFIG_FILE = "./ui.json"
 CONFIG_FILE = "./config.yaml"
 
-# def load_config(config_file):
-#     """
-#     Load the configuration from a YAML file.
-#     """
-#     with open(config_file, "r") as f:
-#         config = yaml.safe_load(f)
-#     return config
-
 
 def load_config(config_file):
     """
@@ -81,7 +73,6 @@ from llama_index.llms.ollama import Ollama
 from llama_index.llms.openai import OpenAI
 
 llm_classes = {"openai": OpenAI, "ollama": Ollama, "groq": Groq}
-
 llm_provider = config.get("llm_provider")
 llm_class = llm_classes.get(llm_provider)
 
@@ -89,7 +80,6 @@ if llm_class is None:
     raise ValueError(f"Unsupported llm_provider: {llm_provider}")
 
 llm_params = config.get("llm_parameters", {})
-
 llm = llm_class(model=config["llm_model_name"], **llm_params)
 
 Settings.llm = llm
@@ -190,7 +180,6 @@ query_engine = index.as_query_engine(text_qa_template=qa_template, similarity_to
 # Add conversation history to context
 conversation_history = get_conversation_history()
 full_prompt = f"{conversation_history}User: {prompt}"
-
 
 if st.session_state.messages[-1]["role"] == "user":
     with st.chat_message("assistant"):

@@ -1,5 +1,5 @@
-You are a helpful assistant, specialized in retrieving and synthesizing knowledge from a local database. You answer user questions to the best of your ability. Here is one: {query_str}
-Here is your knowledge base:
+You are a helpful AI assistant. You answer user's questions by retrieving information from your local knowledge base. Here is one: {query_str}
+Here is your knowledge base :
 --------
 {context_str}
 --------
