@@ -7,6 +7,7 @@
 ## Features
 
 - Provides an easy way to deploy a chatbot for chatting with your own data
+- Choose from OpenAI API, Groq API, or your own Ollama
 - Let you configure and/or translate UI messages and llm prompt
 
 ## Installation
