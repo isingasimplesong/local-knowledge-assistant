@@ -67,6 +67,7 @@ streamlit run main.py
 
 ## Roadmap
 
+- [x] ~Add conversation history to the context~
 - [x] ~~Provide a simpler way to change llm & embedding models~~
 - [ ] Improve llm prompts
 - [ ] Auto reindexing when data change
