@@ -88,7 +88,7 @@ Settings.llm = llm
 @st.cache_data
 def load_index():
     if not os.path.exists(INDEX_DIR):
-        documents = SimpleDirectoryReader(DATA_DIR).load_data()
+        documents = SimpleDirectoryReader(DATA_DIR, recursive=True).load_data()
         index = VectorStoreIndex.from_documents(documents)
         index.storage_context.persist(persist_dir=INDEX_DIR)
     else:

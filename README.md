@@ -72,11 +72,11 @@ streamlit run main.py
 ## Roadmap
 
 - [x] ~Add conversation history to the context~
-- [x] ~~Provide a simpler way to change llm & embedding models~~
+- [x] ~Provide a simpler way to change llm & embedding models~
 - [ ] Improve llm prompts
 - [ ] add Anthropic to the available llms
 - [ ] Auto reindexing when data change
-- [ ] Recursive indexing
+- [x] ~Recursive indexing~
 - [ ] Provide a docker image for easy deployment
 
 ## Thanks
