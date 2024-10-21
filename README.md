@@ -1,4 +1,4 @@
-# Local Knowledge assistant
+# LKA : Local Knowledge assistant
 
 <p align="center">
   <img src="screenshot.png" alt="lka screenshot"/>
