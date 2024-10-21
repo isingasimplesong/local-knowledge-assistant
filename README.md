@@ -20,6 +20,7 @@ git clone https://github.com/isingasimplesong/local-knowledge-assistant.git
 cd local-knowledge-assistant
 # put your data in data/
 ln -s /path/to/your_data data
+# create and activate a virtual env
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -46,6 +47,7 @@ Use `powershell`
 git clone https://github.com/isingasimplesong/local-knowledge-assistant.git
 cd local-knowledge-assistant
 # Put your data in the data/ directory
+# create and activate a virtual env
 python -m venv venv
 .\venv\Scripts\Activate  # Note: Use `deactivate` to exit the environment when done
 pip install -r requirements.txt
