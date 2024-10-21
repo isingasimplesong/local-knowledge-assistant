@@ -68,7 +68,9 @@ streamlit run main.py
 ## Roadmap
 
 - [x] ~~Provide a simpler way to change llm & embedding models~~
-- [ ] Improve indexation & default prompts
+- [ ] Improve llm prompts
+- [ ] Auto reindexing when data change
+- [ ] Recursive indexing
 - [ ] Provide a docker image for easy deployment
 
 ## Thanks
