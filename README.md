@@ -75,7 +75,7 @@ streamlit run main.py
 - [x] ~Provide a simpler way to change llm & embedding models~
 - [ ] Improve llm prompts
 - [ ] add Anthropic to the available llms
-- [ ] Auto reindexing when data change
+- [x] ~Auto reindexing when data change~
 - [x] ~Recursive indexing~
 - [ ] Provide a docker image for easy deployment
 

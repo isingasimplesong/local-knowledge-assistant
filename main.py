@@ -1,4 +1,5 @@
 import base64
+import hashlib
 import json
 import os
 
@@ -85,8 +86,22 @@ llm = llm_class(model=config["llm_model_name"], **llm_params)
 Settings.llm = llm
 
 
+def compute_data_version(data_dir):
+    """Compute a hash representing the current state of data_dir."""
+    hash_md5 = hashlib.md5()
+    for root, _, files in os.walk(data_dir):
+        for filename in sorted(files):
+            filepath = os.path.join(root, filename)
+            # Include file modification time and size
+            file_stats = os.stat(filepath)
+            hash_md5.update(str(file_stats.st_mtime).encode())
+            hash_md5.update(str(file_stats.st_size).encode())
+            hash_md5.update(filepath.encode())
+    return hash_md5.hexdigest()
+
+
 @st.cache_data
-def load_index():
+def load_index(data_version):
     if not os.path.exists(INDEX_DIR):
         documents = SimpleDirectoryReader(DATA_DIR, recursive=True).load_data()
         index = VectorStoreIndex.from_documents(documents)
@@ -97,7 +112,9 @@ def load_index():
     return index
 
 
-index = load_index()
+# compute date version and load index
+data_version = compute_data_version(DATA_DIR)
+index = load_index(data_version)
 
 
 def prepare_template(template_file):
