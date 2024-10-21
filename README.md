@@ -23,6 +23,7 @@ ln -s /path/to/your_data data
 # create and activate a virtual env
 python3 -m venv venv
 source venv/bin/activate
+# install dependencies
 pip install -r requirements.txt
 # edit config.yaml according to your needs
 streamlit run main.py
@@ -50,6 +51,7 @@ cd local-knowledge-assistant
 # create and activate a virtual env
 python -m venv venv
 .\venv\Scripts\Activate  # Note: Use `deactivate` to exit the environment when done
+# install dependencies
 pip install -r requirements.txt
 # edit config.yaml according to your needs
 streamlit run main.py
