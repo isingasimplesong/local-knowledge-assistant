@@ -6,7 +6,7 @@ llm_provider: 'openai'
 # LLM Model Name
 # refer to providers documentation for available models
 # llm_model_name: 'llama-3.2-90b-text-preview'
-llm_model_name: 'gpt-4o-mini'
+llm_model_name: 'gpt-4o'
 # llm_model_name: 'claude-3-5-sonnet-latest'
 
 # LLM Parameters (optional - adjust as needed)
