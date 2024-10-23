@@ -4,7 +4,7 @@
 llm_provider: 'openai'
 
 # LLM Model Name
-# refer to groq or openai documentation for available models
+# refer to providers documentation for available models
 # llm_model_name: 'llama-3.2-90b-text-preview'
 llm_model_name: 'gpt-4o-mini'
 # llm_model_name: 'claude-3-5-sonnet-latest'
