@@ -7,7 +7,7 @@
 ## Features
 
 - Provides an easy way to deploy a chatbot for chatting with your own data
-- Choose from OpenAI API, Groq API, or your own Ollama
+- Choose from OpenAI, Anthropic, Groq API, or your own Ollama
 - Let you configure and/or translate UI messages and llm prompt
 
 ## Installation
@@ -60,9 +60,9 @@ streamlit run main.py
 
 ## Configuration
 
-- Get a [groq API key here](https://console.groq.com/) or an [OpenAI API key here](https://platform.openai.com/api-keys). If needed, [Ollama users should read this](https://github.com/ollama/ollama/issues/849)
+- Get a [groq API key here](https://console.groq.com/), an [Anthropic API key here](https://www.anthropic.com/api), and/or an [OpenAI API key here](https://platform.openai.com/api-keys). If needed, [Ollama users should read this](https://github.com/ollama/ollama/issues/849)
 - Edit `config.yaml` to your liking
-- Set env variables `GROQ_API_KEY`and `OPENAI_API_KEY` [at system level](https://chatgpt.com/share/6715773a-ca24-800e-a80c-109fd28dce35)
+- Set env variables `GROQ_API_KEY`, `ANTHROPIC_API_KEY` and/or `OPENAI_API_KEY` [at system level](https://chatgpt.com/share/6715773a-ca24-800e-a80c-109fd28dce35)
 - you can change or translate the prompt sent to the model in `template.txt`,
 - you can change or translate UI messages in `messages.json`,
 - you can configure the Chatbot UI in `ui.json`
