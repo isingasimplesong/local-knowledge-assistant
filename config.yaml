@@ -1,12 +1,13 @@
 # LLM Provider Configuration
-# Available options: 'openai', 'ollama', 'groq'
+# Available options: 'openai', 'ollama', 'groq', 'anthropic'
 
 llm_provider: 'openai'
 
 # LLM Model Name
 # refer to groq or openai documentation for available models
 # llm_model_name: 'llama-3.2-90b-text-preview'
-llm_model_name: 'gpt-4o'
+llm_model_name: 'gpt-4o-mini'
+# llm_model_name: 'claude-3-5-sonnet-latest'
 
 # LLM Parameters (optional - adjust as needed)
 # llm_parameters:
@@ -14,11 +15,11 @@ llm_model_name: 'gpt-4o'
 #   request_timeout: 220.0
 
 # Embedding Provider Configuration
-# Available options: 'huggingface', 'default' (for OpenAI)
+# Available options: 'huggingface' (for Groq & Ollama), 'default' (for OpenAI and Anthropic)
 # embedding_provider: 'huggingface'
 embedding_provider: 'default'
 
-# Embedding Model Name (comment for OpenAI, uncomment if using Hugging Face)
+# Embedding Model Name (comment for OpenAI/Anthropic, uncomment if using Hugging Face)
 # embedding_name: 'mixedbread-ai/mxbai-embed-large-v1'
 
 # API Keys
@@ -27,5 +28,6 @@ embedding_provider: 'default'
 api_keys:
   openai_api_key: '${OPENAI_API_KEY}'
   groq_api_key: '${GROQ_API_KEY}'
+  anthropic_api_key: '${ANTHROPIC_API_KEY}'
   # if needed
   # ollama_api_key: '${OLLAMA_API_KEY}'

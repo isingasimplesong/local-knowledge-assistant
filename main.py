@@ -40,6 +40,7 @@ api_keys = config.get("api_keys", {})
 openai_api_key = api_keys.get("openai_api_key")
 groq_api_key = api_keys.get("groq_api_key")
 ollama_api_key = api_keys.get("ollama_api_key")
+anthropic_api_key = api_keys.get("anthropic_api_key")
 
 # Set environment variables or handle API keys as needed
 if openai_api_key:
@@ -48,6 +49,8 @@ if groq_api_key:
     os.environ["GROQ_API_KEY"] = groq_api_key
 if ollama_api_key:
     os.environ["OLLAMA_API_KEY"] = ollama_api_key
+if anthropic_api_key:
+    os.environ["ANTHROPIC_API_KEY"] = anthropic_api_key
 
 # Embedding setup
 embedding_provider = config.get("embedding_provider", "default")
@@ -67,13 +70,14 @@ elif embedding_provider == "default":
 else:
     raise ValueError(f"Unsupported embedding_provider: {embedding_provider}")
 
-from llama_index.llms.groq import Groq
-from llama_index.llms.ollama import Ollama
 
 # LLM setup
+from llama_index.llms.anthropic import Anthropic
+from llama_index.llms.groq import Groq
+from llama_index.llms.ollama import Ollama
 from llama_index.llms.openai import OpenAI
 
-llm_classes = {"openai": OpenAI, "ollama": Ollama, "groq": Groq}
+llm_classes = {"anthropic": Anthropic, "groq": Groq, "openai": OpenAI, "ollama": Ollama}
 llm_provider = config.get("llm_provider")
 llm_class = llm_classes.get(llm_provider)
 
