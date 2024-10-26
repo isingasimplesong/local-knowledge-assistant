@@ -1,3 +1,5 @@
 venv
 data
 storage
+.env
+.dockerignore
