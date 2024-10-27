@@ -1,17 +1,15 @@
 services:
-  lka:
-    build: .
-    container_name: lka
+  local-knowledge-assistant:
+    image: effraie/local-knowledge-assistant:v1.2.0
+    container_name: local-knowledge-assistant
+    user: "1000:1000"
     ports:
       - "8501:8501"
-    user: "1000:1000"
-    env_file:
-      - .env
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - GROQ_API_KEY=${GROQ_API_KEY}
       - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
-      #  - OLLAMA_API_KEY=${OLLAMA_API_KEY}
+      - OLLAMA_API_KEY=${OLLAMA_API_KEY}
     volumes:
       - ${LKA_DATA_DIR}:/app/data
       - ${LKA_STORAGE_DIR}:/app/storage

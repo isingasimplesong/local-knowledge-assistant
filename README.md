@@ -14,21 +14,21 @@
 
 ### Docker (recommended)
 
-- You will need `docker` and `docker-compose`
-- Clone code
+- Clone the code :
 
-```bash
-git clone https://github.com/isingasimplesong/local-knowledge-assistant.git
-cd local-knowledge-assistant
-```
+  ```sh
+  git clone https://github.com/isingasimplesong/local-knowledge-assistant.git
+  cd local-knowledge-assistant
+  ```
 
-- Edit `env-example` with relevant API keys, and relevant paths
-- Save it to `.env`
-- Edit `config/config.json` to your liking
-- Create `storage/`
+- edit `env-example` save it as .env
+- edit `config/config.yaml` as needed
 - run `docker-compose up -d`
+- open your browser at [http://localhost:8501](http://localhost:8501)
 
-### Linux
+### Local
+
+#### Linux
 
 ```bash
 # clone code
@@ -45,14 +45,14 @@ pip install -r requirements.txt
 streamlit run main.py
 ```
 
-### Mac
+#### Mac
 
 > [!warning]
 > Untested. Please profide feedback if you try
 
 You should be ok following linux instructions
 
-### Windows
+#### Windows
 
 Use `powershell`
 
@@ -93,7 +93,7 @@ streamlit run main.py
 - [x] ~add Anthropic to the available llms~
 - [x] ~Auto reindexing when data change~
 - [x] ~Recursive indexing~
-- [ ] Provide a docker image for easy deployment
+- [x] ~Provide a docker image for easy deployment~
 
 ## Thanks
 
