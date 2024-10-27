@@ -106,7 +106,7 @@ def compute_data_version(data_dir):
 
 @st.cache_data
 def load_index(data_version):
-    if not os.path.exists(INDEX_DIR):
+    if not os.path.exists(INDEX_DIR) or not os.listdir(INDEX_DIR):
         documents = SimpleDirectoryReader(DATA_DIR, recursive=True).load_data()
         index = VectorStoreIndex.from_documents(documents)
         index.storage_context.persist(persist_dir=INDEX_DIR)
