@@ -5,12 +5,12 @@ services:
     user: "1000:1000"
     ports:
       - "8501:8501"
+    volumes:
+      - ${LKA_DATA_DIR}:/app/data
+      - ${LKA_STORAGE_DIR}:/app/storage
+      - ${LKA_CONFIG_DIR}:/app/config
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - GROQ_API_KEY=${GROQ_API_KEY}
       - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
       - OLLAMA_API_KEY=${OLLAMA_API_KEY}
-    volumes:
-      - ${LKA_DATA_DIR}:/app/data
-      - ${LKA_STORAGE_DIR}:/app/storage
-      - ${LKA_CONFIG_DIR}:/app/config

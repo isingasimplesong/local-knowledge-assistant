@@ -1,9 +1,10 @@
-# add relevant API keys & set relevant paths
-# rename to .env
+# set relevant API keys
 OPENAI_API_KEY=
 GROQ_API_KEY=
 OLLAMA_API_KEY=
 ANTHROPIC_API_KEY=
-LKA_DATA_DIR=/path/to/your/data
+# set relevant paths
+LKA_DATA_DIR=/path/to/your/text/data
 LKA_STORAGE_DIR=./storage
 LKA_CONFIG_DIR=./config
+# rename to .env
