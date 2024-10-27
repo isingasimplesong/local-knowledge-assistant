@@ -1,10 +1,8 @@
 services:
-  lka:
+  local-knowledge-assistant:
     image: effraie/local-knowledge-assistant:v1.2.0
-    container_name: lka
+    container_name: local-knowledge-assistant
     user: "1000:1000"
-    env_file:
-      - .env
     ports:
       - "8501:8501"
     environment:
