@@ -24,7 +24,7 @@
 - edit `env-example` save it as .env
 - edit `config/config.yaml` as needed
 - run `docker-compose up -d`
-- open your browser at [http://localhost:8501]
+- open your browser at [http://localhost:8501](http://localhost:8501)
 
 ### Local
 
