@@ -26,7 +26,7 @@
 - run `docker-compose up -d`
 - open your browser at [http://localhost:8501](http://localhost:8501)
 
-### Local
+### Manual installation
 
 #### Linux
 
