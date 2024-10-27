@@ -1,0 +1,17 @@
+services:
+  lka:
+    build: .
+    container_name: lka
+    ports:
+      - "8501:8501"
+    volumes:
+      - /home/mathieu/Notes:/app/data
+      - /home/mathieu/Projets/docker/data/lka/storage:/app/storage
+      - /home/mathieu/Projets/docker/data/lka/config:/app/config
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - OLLAMA_API_KEY=${OLLAMA_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    env_file:
+      - .env
