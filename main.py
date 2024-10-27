@@ -16,10 +16,10 @@ from llama_index.core import (
 
 DATA_DIR = "./data"
 INDEX_DIR = "./storage"
-TEMPLATE_FILE = "./template.txt"
-MESSAGES_FILE = "./messages.json"
-UI_CONFIG_FILE = "./ui.json"
-CONFIG_FILE = "./config.yaml"
+TEMPLATE_FILE = "./config/template.txt"
+MESSAGES_FILE = "./config/messages.json"
+UI_CONFIG_FILE = "./config/ui.json"
+CONFIG_FILE = "./config/config.yaml"
 
 
 def load_config(config_file):
