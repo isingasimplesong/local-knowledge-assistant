@@ -1,6 +1,10 @@
 # copy that file to .env
 # add relevant API keys
+# set relevant paths
 OPENAI_API_KEY=
 GROQ_API_KEY=
 OLLAMA_API_KEY=
 ANTHROPIC_API_KEY=
+LKA_DATA_DIR=
+LKA_STORAGE_DIR=
+LKA_CONFIG_DIR=

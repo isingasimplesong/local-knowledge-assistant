@@ -10,9 +10,9 @@ services:
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - GROQ_API_KEY=${GROQ_API_KEY}
-      #  - OLLAMA_API_KEY=${OLLAMA_API_KEY}
       - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      #  - OLLAMA_API_KEY=${OLLAMA_API_KEY}
     volumes:
-      - /home/mathieu/Notes:/app/data
-      - /home/mathieu/Projets/docker/data/lka/storage:/app/storage
-      - /home/mathieu/Projets/docker/data/lka/config:/app/config
+      - ${LKA_DATA_DIR}:/app/data
+      - ${LKA_STORAGE_DIR}:/app/storage
+      - ${LKA_CONFIG_DIR}:/app/config
