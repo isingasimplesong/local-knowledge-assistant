@@ -12,6 +12,22 @@
 
 ## Installation
 
+### Docker (recommended)
+
+- You will need `docker` and `docker-compose`
+- Clone code
+
+```bash
+git clone https://github.com/isingasimplesong/local-knowledge-assistant.git
+cd local-knowledge-assistant
+```
+
+- Edit `env-example` with relevant API keys, and relevant paths
+- Save it to `.env`
+- Edit `config/config.json` to your liking
+- Create `storage/`
+- run `docker-compose up -d`
+
 ### Linux
 
 ```bash
