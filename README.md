@@ -21,7 +21,7 @@
   cd local-knowledge-assistant
   ```
 
-- edit `env-example` and save it as .env
+- edit `env-example` and save it as `.env`
 - edit `config/config.yaml` as needed
 - run `docker-compose up -d`
 - open your browser at [http://localhost:8501](http://localhost:8501)
