@@ -48,7 +48,7 @@ streamlit run main.py
 #### Mac
 
 > [!warning]
-> Untested. Please profide feedback if you try
+> Untested. Please provide feedback if you try
 
 You should be ok following linux instructions
 
@@ -57,7 +57,7 @@ You should be ok following linux instructions
 Use `powershell`
 
 > [!warning]
-> Untested. Please profide feedback if you try
+> Untested. Please provide feedback if you try
 
 ```powershell
 # clone code
