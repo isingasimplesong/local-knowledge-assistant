@@ -92,6 +92,7 @@ streamlit run main.py
 
 ## Roadmap
 
+- [ ] improving data retrieval behavior after first answer
 - [x] ~Add conversation history to the context~
 - [x] ~Provide a simpler way to change llm & embedding models~
 - [x] ~Improve llm prompts~
