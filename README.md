@@ -28,8 +28,8 @@
 
 > [!NOTE]
 > You could also just grab [docker-compose.yml](docker-compose.yml) and
-> [.env](env-example), edit them according to your needs, and edit config files
-> after the first run if the defaults do not suits you
+> [.env](env-example), and edit them according to your needs. You can edit
+> config files after the first run if the defaults do not suits you
 
 ### Manual installation
 
