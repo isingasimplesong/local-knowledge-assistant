@@ -45,6 +45,10 @@ pip install -r requirements.txt
 streamlit run main.py
 ```
 
+You could also just grab [docker-compose.yml](docker-compose.yml) and
+[.env](env-example), edit them according to your needs, and edit config files
+after the first run if the defaults do not suits you
+
 #### Mac
 
 > [!warning]
