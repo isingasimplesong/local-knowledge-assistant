@@ -26,6 +26,10 @@
 - run `docker-compose up -d`
 - open your browser at [http://localhost:8501](http://localhost:8501)
 
+You could also just grab [docker-compose.yml](docker-compose.yml) and
+[.env](env-example), edit them according to your needs, and edit config files
+after the first run if the defaults do not suits you
+
 ### Manual installation
 
 #### Linux
@@ -44,10 +48,6 @@ pip install -r requirements.txt
 # edit config.yaml according to your needs
 streamlit run main.py
 ```
-
-You could also just grab [docker-compose.yml](docker-compose.yml) and
-[.env](env-example), edit them according to your needs, and edit config files
-after the first run if the defaults do not suits you
 
 #### Mac
 
